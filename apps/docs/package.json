@@ -11,12 +11,12 @@
     "lint": "eslint ./stories/*.stories.tsx --max-warnings 0"
   },
   "dependencies": {
-    "@acme/ui": "*",
+    "@vectorkit/ui": "*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@repo/eslint-config": "*",
+    "@vectorkit/eslint-config": "*",
     "@storybook/addon-actions": "^8.2.6",
     "@storybook/addon-essentials": "^8.2.6",
     "@storybook/addon-links": "^8.2.6",
@@ -24,10 +24,12 @@
     "@storybook/react-vite": "^8.2.6",
     "@vitejs/plugin-react": "^4.2.1",
     "eslint": "^8.57.0",
+    "eslint-plugin-mdx": "^3.1.5",
+    "eslint-plugin-storybook": "^0.8.0",
     "serve": "^14.2.1",
     "storybook": "^8.2.6",
-    "@repo/typescript-config": "*",
-    "typescript": "5.5.4",
+    "@vectorkit/typescript-config": "*",
+    "typescript": "5.3.3",
     "vite": "^5.1.4"
   }
 }
