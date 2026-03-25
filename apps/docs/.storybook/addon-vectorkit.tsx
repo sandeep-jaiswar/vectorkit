@@ -1,13 +1,13 @@
-import React from 'react';
-import { addons, types } from '@storybook/manager-api';
-import { IconButton } from '@storybook/components';
-import { tokens } from '@vectorkit/design-tokens';
+import React from "react";
+import { addons, types } from "@storybook/manager-api";
+import { IconButton } from "@storybook/components";
+import { tokens } from "@vectorkit/design-tokens";
 
-// We can't easily use the actual Button from @vectorkit/ui because it might have complex 
+// We can't easily use the actual Button from @vectorkit/ui because it might have complex
 // dependencies or look weird in the manager's small toolbar space without the full CSS.
 // But we can use the TOKENS to style manager components.
 
-const ADDON_ID = 'vectorkit-addon';
+const ADDON_ID = "vectorkit-addon";
 const TOOL_ID = `${ADDON_ID}/tool`;
 
 const VectorKitTool = () => {
@@ -15,7 +15,9 @@ const VectorKitTool = () => {
     <IconButton
       key={TOOL_ID}
       title="Vectorkit Brand"
-      onClick={() => window.open('https://github.com/sandeepjaiswar/vectorkit', '_blank')}
+      onClick={() =>
+        window.open("https://github.com/sandeepjaiswar/vectorkit", "_blank")
+      }
       style={{
         color: tokens.colors.primary,
       }}
@@ -41,7 +43,7 @@ const VectorKitTool = () => {
 addons.register(ADDON_ID, () => {
   addons.add(TOOL_ID, {
     type: types.TOOL,
-    title: 'Vectorkit',
+    title: "Vectorkit",
     match: ({ viewMode }) => !!(viewMode && viewMode.match(/^(story|docs)$/)),
     render: VectorKitTool,
   });

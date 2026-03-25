@@ -1,13 +1,13 @@
-import { create } from '@storybook/theming/create';
-import { tokens } from '@vectorkit/design-tokens';
+import { create } from "@storybook/theming/create";
+import { tokens } from "@vectorkit/design-tokens";
 
 export default create({
-  base: 'light',
+  base: "light",
   // Brand
-  brandTitle: 'vectorkit',
-  brandUrl: 'https://github.com/sandeepjaiswar/vectorkit',
-  brandImage: './logo.png',
-  brandTarget: '_self',
+  brandTitle: "vectorkit",
+  brandUrl: "https://github.com/sandeepjaiswar/vectorkit",
+  brandImage: "./logo.png",
+  brandTarget: "_self",
 
   // UI
   appBg: tokens.colors.surface,
@@ -33,7 +33,7 @@ export default create({
 
   // Typography
   fontBase: tokens.typography.fontFamily,
-  fontCode: 'monospace',
+  fontCode: "monospace",
 
   // Colors
   colorPrimary: tokens.colors.primary,

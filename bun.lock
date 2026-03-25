@@ -25,6 +25,8 @@
         "@storybook/addon-links": "^8.2.6",
         "@storybook/react": "^8.2.6",
         "@storybook/react-vite": "^8.2.6",
+        "@types/react": "^18.2.61",
+        "@types/react-dom": "^18.2.19",
         "@vectorkit/eslint-config": "*",
         "@vectorkit/typescript-config": "*",
         "@vitejs/plugin-react": "^4.2.1",

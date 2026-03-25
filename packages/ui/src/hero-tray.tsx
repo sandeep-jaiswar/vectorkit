@@ -1,13 +1,14 @@
-import React from "react";
+import { forwardRef } from "react";
+import type { HTMLAttributes, ReactNode } from "react";
 
-export interface HeroTrayProps extends React.HTMLAttributes<HTMLDivElement> {
-  children: React.ReactNode;
+export interface HeroTrayProps extends HTMLAttributes<HTMLDivElement> {
+  children: ReactNode;
 }
 
-export const HeroTray = React.forwardRef<HTMLDivElement, HeroTrayProps>(
-  ({ className = "", children, ...props }, ref) => {
+export const HeroTray = forwardRef<HTMLDivElement, HeroTrayProps>(
+  ({ children, className = "", ...props }, ref) => {
     return (
-      <div ref={ref} className={`vk-hero-tray ${className}`.trim()} {...props}>
+      <div className={`vk-hero-tray ${className}`.trim()} ref={ref} {...props}>
         {children}
       </div>
     );

@@ -1,12 +1,14 @@
-export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  children: React.ReactNode;
+import type { ButtonHTMLAttributes, ReactNode } from "react";
+
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  children: ReactNode;
   variant?: "primary" | "secondary" | "tertiary";
 }
 
 export function Button({
   children,
-  variant = "primary",
   className = "",
+  variant = "primary",
   ...other
 }: ButtonProps): JSX.Element {
   const baseClass = "vk-btn";
@@ -14,8 +16,8 @@ export function Button({
 
   return (
     <button
-      type="button"
       className={`${baseClass} ${variantClass} ${className}`.trim()}
+      type="button"
       {...other}
     >
       {children}

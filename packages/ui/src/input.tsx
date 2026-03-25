@@ -1,25 +1,26 @@
-import React from "react";
+import { forwardRef } from "react";
+import type { InputHTMLAttributes } from "react";
 
-export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   wrapperClassName?: string;
 }
 
-export const Input = React.forwardRef<HTMLInputElement, InputProps>(
+export const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ className = "", label, wrapperClassName = "", ...props }, ref) => {
     return (
       <div className={`vk-input-wrapper ${wrapperClassName}`.trim()}>
-        {label && (
+        {label ? (
           <label
             className="vk-label-sm"
             style={{ marginBottom: "var(--vk-spacing-8)" }}
           >
             {label}
           </label>
-        )}
+        ) : null}
         <input
-          ref={ref}
           className={`vk-input ${className}`.trim()}
+          ref={ref}
           {...props}
         />
       </div>

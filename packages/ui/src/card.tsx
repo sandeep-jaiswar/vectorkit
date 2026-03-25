@@ -1,13 +1,14 @@
-import React from "react";
+import { forwardRef } from "react";
+import type { HTMLAttributes, ReactNode } from "react";
 
-export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
-  children: React.ReactNode;
+export interface CardProps extends HTMLAttributes<HTMLDivElement> {
+  children: ReactNode;
 }
 
-export const Card = React.forwardRef<HTMLDivElement, CardProps>(
-  ({ className = "", children, ...props }, ref) => {
+export const Card = forwardRef<HTMLDivElement, CardProps>(
+  ({ children, className = "", ...props }, ref) => {
     return (
-      <div ref={ref} className={`vk-card ${className}`.trim()} {...props}>
+      <div className={`vk-card ${className}`.trim()} ref={ref} {...props}>
         {children}
       </div>
     );
@@ -16,10 +17,10 @@ export const Card = React.forwardRef<HTMLDivElement, CardProps>(
 
 Card.displayName = "Card";
 
-export const CardGroup = React.forwardRef<HTMLDivElement, CardProps>(
-  ({ className = "", children, ...props }, ref) => {
+export const CardGroup = forwardRef<HTMLDivElement, CardProps>(
+  ({ children, className = "", ...props }, ref) => {
     return (
-      <div ref={ref} className={`vk-card-group ${className}`.trim()} {...props}>
+      <div className={`vk-card-group ${className}`.trim()} ref={ref} {...props}>
         {children}
       </div>
     );

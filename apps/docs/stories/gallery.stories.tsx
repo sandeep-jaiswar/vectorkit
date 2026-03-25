@@ -74,7 +74,7 @@ export const Showcase: StoryObj = {
             Moving beyond standard minimalist templates, this system treats the
             interface as a high-end editorial gallery. It is characterized by an
             uncompromising commitment to whitespace, sophisticated monochrome
-            depth, and a "vibe-first" structural philosophy.
+            depth, and a &quot;vibe-first&quot; structural philosophy.
           </p>
         </div>
 
@@ -99,8 +99,8 @@ export const Showcase: StoryObj = {
                 </p>
                 <Input placeholder="Enter your email" wrapperClassName="mb-4" />
                 <Button
-                  variant="primary"
                   style={{ marginTop: "1rem", width: "100%" }}
+                  variant="primary"
                 >
                   Subscribe
                 </Button>
@@ -111,8 +111,8 @@ export const Showcase: StoryObj = {
                 </p>
                 <Button variant="secondary">View Collection</Button>
                 <p className="vk-body-lg" style={{ marginTop: "1rem" }}>
-                  The strict "No-Line" rule creates a molded look, utilizing
-                  background color shifts over borders.
+                  The strict &quot;No-Line&quot; rule creates a molded look,
+                  utilizing background color shifts over borders.
                 </p>
               </Card>
             </CardGroup>
