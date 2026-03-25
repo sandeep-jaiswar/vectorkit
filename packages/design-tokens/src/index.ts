@@ -1,16 +1,22 @@
 export const tokens = {
   colors: {
+    primary: "#0058bc",
+    primaryContainer: "#0070eb",
+    onPrimary: "#FFFFFF",
     surface: "#f9f9fb",
+    onSurface: "#1a1c1d",
+    onNeutral: "#1a1c1d",
     surfaceContainerLowest: "#ffffff",
     surfaceContainerLow: "#f3f3f5",
     surfaceContainerHigh: "#e8e8ea",
-    surfaceContainerHighest: "#e0e0e3",
-    onSurface: "#1a1c1d",
-    onSurfaceRgb: "26, 28, 29",
-    primary: "#0058bc",
-    primaryContainer: "#0070eb",
+    surfaceContainerHighest: "#dcdcdf",
+    secondary: "#2c2e30",
+    onSecondary: "#FFFFFF",
+    tertiary: "#000000",
+    onTertiary: "#FFFFFF",
+    error: "#E04040",
+    onError: "#FFFFFF",
     outlineVariant: "#c1c6d7",
-    outlineVariantRgb: "193, 198, 215",
   },
   typography: {
     fontFamily:
@@ -35,12 +41,12 @@ export const tokens = {
     },
   },
   elevation: {
-    shadowAmbient: "0 20px 40px rgba(26, 28, 29, 0.08)",
-    shadowAmbientLarge: "0 30px 60px rgba(26, 28, 29, 0.12)",
+    shadowAmbient: "0 30px 60px rgba(26, 28, 29, 0.06)",
+    shadowAmbientLarge: "0 40px 80px rgba(26, 28, 29, 0.1)",
   },
   glass: {
     bg: "rgba(255, 255, 255, 0.7)",
-    blur: "blur(40px)",
+    blur: "blur(20px)",
   },
   spacing: {
     s8: "2rem",
@@ -48,8 +54,8 @@ export const tokens = {
     s12: "4rem",
   },
   radii: {
-    md: "0.75rem",
-    xl: "1.5rem",
+    md: "0.5rem",
+    xl: "1rem",
   },
 } as const;
 

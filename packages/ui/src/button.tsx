@@ -2,25 +2,33 @@ import type { ButtonHTMLAttributes, ReactNode } from "react";
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
-  variant?: "primary" | "secondary" | "tertiary";
+  color?: "primary" | "secondary" | "neutral" | "danger";
+  shape?: "default" | "square" | "circle";
+  variant?: "solid" | "outlined" | "ghost";
 }
 
 export function Button({
   children,
   className = "",
-  variant = "primary",
+  color = "primary",
+  shape = "default",
+  variant = "solid",
   ...other
 }: ButtonProps): JSX.Element {
-  const baseClass = "vk-btn";
-  const variantClass = `vk-btn--${variant}`;
-
   return (
     <button
-      className={`${baseClass} ${variantClass} ${className}`.trim()}
+      className={`vk-btn ${className}`.trim()}
+      data-color={color}
+      data-shape={shape}
+      data-variant={variant}
       type="button"
       {...other}
     >
-      {children}
+      {typeof children === "string" || typeof children === "number" ? (
+        <span>{children}</span>
+      ) : (
+        children
+      )}
     </button>
   );
 }

@@ -1,13 +1,28 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Button } from "@vectorkit/ui/button";
+import { Button } from "@vectorkit/ui";
 
 const meta: Meta<typeof Button> = {
+  title: "UI/Button",
   component: Button,
   argTypes: {
-    type: {
-      control: { type: "radio" },
-      options: ["button", "submit", "reset"],
+    color: {
+      control: "select",
+      options: ["primary", "secondary", "neutral", "danger"],
     },
+    variant: {
+      control: "select",
+      options: ["solid", "outlined", "ghost"],
+    },
+    shape: {
+      control: "select",
+      options: ["default", "square", "circle"],
+    },
+  },
+  args: {
+    children: "Button",
+    color: "primary",
+    variant: "solid",
+    shape: "default",
   },
 };
 
@@ -15,32 +30,71 @@ export default meta;
 
 type Story = StoryObj<typeof Button>;
 
-/*
- *👇 Render functions are a framework specific feature to allow you control on how the component renders.
- * See https://storybook.js.org/docs/react/api/csf
- * to learn how to use render functions.
- */
-export const Primary: Story = {
-  render: (props) => (
-    <Button
-      {...props}
-      onClick={(): void => {
-        // eslint-disable-next-line no-alert -- alert for demo
-        alert("Hello from Turborepo!");
-      }}
-    >
-      Hello
-    </Button>
+export const Default: Story = {};
+
+export const Variants: Story = {
+  render: () => (
+    <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
+      <Button color="primary" variant="solid">
+        Primary
+      </Button>
+      <Button color="secondary" variant="solid">
+        Secondary
+      </Button>
+      <Button color="neutral" variant="solid">
+        Neutral
+      </Button>
+      <Button color="danger" variant="solid">
+        Danger
+      </Button>
+    </div>
   ),
-  name: "Button",
-  args: {
-    children: "Hello",
-    type: "button",
-    style: {
-      color: "blue",
-      border: "1px solid gray",
-      padding: 10,
-      borderRadius: 10,
-    },
-  },
+};
+
+export const Outlined: Story = {
+  render: () => (
+    <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
+      <Button color="primary" variant="outlined">
+        Primary
+      </Button>
+      <Button color="secondary" variant="outlined">
+        Secondary
+      </Button>
+      <Button color="neutral" variant="outlined">
+        Neutral
+      </Button>
+      <Button color="danger" variant="outlined">
+        Danger
+      </Button>
+    </div>
+  ),
+};
+
+export const Ghost: Story = {
+  render: () => (
+    <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
+      <Button color="primary" variant="ghost">
+        Primary
+      </Button>
+      <Button color="secondary" variant="ghost">
+        Secondary
+      </Button>
+      <Button color="neutral" variant="ghost">
+        Neutral
+      </Button>
+      <Button color="danger" variant="ghost">
+        Danger
+      </Button>
+    </div>
+  ),
+};
+
+export const Shapes: Story = {
+  render: () => (
+    <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
+      <Button shape="default">Default</Button>
+      <Button shape="square">Square</Button>
+      <Button shape="circle">Circle</Button>
+    </div>
+  ),
 };
