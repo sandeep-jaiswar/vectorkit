@@ -4,11 +4,32 @@
   "sideEffects": false,
   "license": "MIT",
   "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
     "./button": {
       "types": "./src/button.tsx",
       "import": "./dist/button.mjs",
       "require": "./dist/button.js"
-    }
+    },
+    "./input": {
+      "types": "./src/input.tsx",
+      "import": "./dist/input.mjs",
+      "require": "./dist/input.js"
+    },
+    "./card": {
+      "types": "./src/card.tsx",
+      "import": "./dist/card.mjs",
+      "require": "./dist/card.js"
+    },
+    "./hero-tray": {
+      "types": "./src/hero-tray.tsx",
+      "import": "./dist/hero-tray.mjs",
+      "require": "./dist/hero-tray.js"
+    },
+    "./styles.css": "./dist/index.css"
   },
   "scripts": {
     "build": "tsup",
@@ -23,10 +44,16 @@
     "eslint": "^8.57.0",
     "@vectorkit/typescript-config": "*",
     "tsup": "^8.0.2",
-    "typescript": "5.3.3"
+    "typescript": "5.3.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "dependencies": {
-    "react": "^18.2.0"
+    "@vectorkit/design-tokens": "workspace:*"
   },
   "publishConfig": {
     "access": "public"

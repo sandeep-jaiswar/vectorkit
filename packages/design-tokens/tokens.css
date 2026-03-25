@@ -1,0 +1,55 @@
+:root {
+  /* 2. Colors & Surface Philosophy */
+  
+  /* Surface Layers */
+  --vk-surface: #f9f9fb;
+  --vk-surface-container-lowest: #ffffff;
+  --vk-surface-container-low: #f3f3f5;
+  --vk-surface-container-high: #e8e8ea;
+  --vk-surface-container-highest: #e0e0e3; /* For secondary buttons */
+
+  /* Text & Accents */
+  --vk-on-surface: #1a1c1d;
+  --vk-on-surface-rgb: 26, 28, 29; /* For alpha calculations */
+  --vk-primary: #0058bc;
+  --vk-primary-container: #0070eb;
+  --vk-outline-variant: #c1c6d7;
+  --vk-outline-variant-rgb: 193, 198, 215;
+
+  /* 3. Typography: The Editorial Voice */
+  --vk-font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  --vk-text-display-lg-size: 3.5rem;
+  --vk-text-display-lg-tracking: -0.02em;
+  --vk-text-display-lg-line-height: 1.1;
+
+  --vk-text-body-lg-size: 1rem;
+  --vk-text-body-lg-tracking: 0;
+  --vk-text-body-lg-line-height: 1.6;
+
+  --vk-text-label-md-size: 0.875rem;
+  --vk-text-label-md-tracking: 0.05em;
+  --vk-text-label-sm-size: 0.75rem;
+  --vk-text-label-sm-tracking: 0.05em;
+
+  /* 4. Elevation & Depth */
+  /* Ambient shadow using on-surface with 8% opacity */
+  --vk-shadow-ambient: 0 20px 40px rgba(var(--vk-on-surface-rgb), 0.08);
+  --vk-shadow-ambient-large: 0 30px 60px rgba(var(--vk-on-surface-rgb), 0.12);
+  
+  /* Glassmorphism */
+  --vk-glass-bg: rgba(255, 255, 255, 0.7);
+  --vk-glass-blur: blur(40px);
+
+  /* Ghost Border */
+  --vk-border-ghost: 1px solid rgba(var(--vk-outline-variant-rgb), 0.15);
+
+  /* Spacing */
+  --vk-spacing-8: 2rem;
+  --vk-spacing-10: 2.5rem;
+  --vk-spacing-12: 4rem;
+
+  /* Radii */
+  --vk-radius-md: 0.75rem;
+  --vk-radius-xl: 1.5rem;
+}

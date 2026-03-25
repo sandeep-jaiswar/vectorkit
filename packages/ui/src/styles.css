@@ -1,0 +1,178 @@
+/* button */
+.vk-btn {
+  font-family: var(--vk-font-family);
+  font-size: var(--vk-text-label-md-size);
+  letter-spacing: var(--vk-text-label-md-tracking);
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.75rem;
+  transition: all 0.2s ease;
+}
+
+.vk-btn--primary {
+  background: linear-gradient(135deg, var(--vk-primary), var(--vk-primary-container));
+  color: #fff;
+  border-radius: var(--vk-radius-md);
+}
+
+.vk-btn--primary:hover {
+  opacity: 0.95;
+  box-shadow: var(--vk-shadow-ambient);
+}
+
+.vk-btn--secondary {
+  background-color: var(--vk-surface-container-highest);
+  color: var(--vk-on-surface);
+  border-radius: var(--vk-radius-md);
+}
+
+.vk-btn--secondary:hover {
+  background-color: var(--vk-surface-container-high);
+}
+
+.vk-btn--tertiary {
+  background: transparent;
+  color: var(--vk-on-surface);
+  padding: 0.5rem 0;
+  border-radius: 0;
+  position: relative;
+}
+
+.vk-btn--tertiary::after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--vk-on-surface);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.vk-btn--tertiary:hover::after {
+  opacity: 1;
+}
+
+/* input */
+.vk-input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.vk-input {
+  font-family: var(--vk-font-family);
+  font-size: var(--vk-text-body-lg-size);
+  line-height: var(--vk-text-body-lg-line-height);
+  color: var(--vk-on-surface);
+  background-color: var(--vk-surface-container-low);
+  border-radius: var(--vk-radius-md);
+  border: none;
+  outline: none;
+  padding: 1rem 1.25rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 1px transparent inset;
+}
+
+.vk-input::placeholder {
+  color: var(--vk-outline-variant);
+}
+
+.vk-input:focus {
+  background-color: var(--vk-surface-container-lowest);
+  /* Ghost Border fallback via box-shadow */
+  box-shadow: 0 0 0 1px rgba(var(--vk-outline-variant-rgb), 0.15) inset;
+}
+
+/* card */
+.vk-card {
+  background-color: var(--vk-surface-container-low);
+  border-radius: var(--vk-radius-xl);
+  padding: var(--vk-spacing-10);
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  color: var(--vk-on-surface);
+  font-family: var(--vk-font-family);
+  border: none; /* "No-Line" Rule */
+}
+
+.vk-card:hover {
+  background-color: var(--vk-surface-container-lowest);
+  box-shadow: var(--vk-shadow-ambient);
+}
+
+.vk-card-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--vk-spacing-10); /* Separated by vertical whitespace, no dividers */
+}
+
+/* hero-tray */
+.vk-hero-tray {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--vk-glass-bg);
+  backdrop-filter: var(--vk-glass-blur);
+  -webkit-backdrop-filter: var(--vk-glass-blur);
+  border-top-left-radius: var(--vk-radius-xl);
+  border-top-right-radius: var(--vk-radius-xl);
+  padding: var(--vk-spacing-12) var(--vk-spacing-10);
+  box-shadow: var(--vk-shadow-ambient-large);
+  color: var(--vk-on-surface);
+  font-family: var(--vk-font-family);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: var(--vk-spacing-8);
+}
+
+/* Typography Globals */
+.vk-display-lg {
+  font-family: var(--vk-font-family);
+  font-size: var(--vk-text-display-lg-size);
+  letter-spacing: var(--vk-text-display-lg-tracking);
+  line-height: var(--vk-text-display-lg-line-height);
+  font-weight: 700;
+  color: #000000; /* Allowed only for high contrast display */
+  margin: 0;
+}
+
+.vk-body-lg {
+  font-family: var(--vk-font-family);
+  font-size: var(--vk-text-body-lg-size);
+  line-height: var(--vk-text-body-lg-line-height);
+  color: var(--vk-on-surface);
+  margin: 0;
+}
+
+.vk-label-md {
+  font-family: var(--vk-font-family);
+  font-size: var(--vk-text-label-md-size);
+  letter-spacing: var(--vk-text-label-md-tracking);
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--vk-on-surface);
+  margin: 0;
+}
+
+.vk-label-sm {
+  font-family: var(--vk-font-family);
+  font-size: var(--vk-text-label-sm-size);
+  letter-spacing: var(--vk-text-label-sm-tracking);
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--vk-on-surface);
+  margin: 0;
+}
+
+.vk-base-surface {
+  background-color: var(--vk-surface);
+  color: var(--vk-on-surface);
+  min-height: 100vh;
+}

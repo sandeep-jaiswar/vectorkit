@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@vectorkit/ui": "*",
+    "@vectorkit/design-tokens": "*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

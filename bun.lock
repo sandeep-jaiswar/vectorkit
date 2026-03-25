@@ -14,6 +14,7 @@
       "name": "docs",
       "version": "0.0.0",
       "dependencies": {
+        "@vectorkit/design-tokens": "*",
         "@vectorkit/ui": "*",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
@@ -36,6 +37,14 @@
         "vite": "^5.1.4",
       },
     },
+    "packages/design-tokens": {
+      "name": "@vectorkit/design-tokens",
+      "version": "0.0.0",
+      "devDependencies": {
+        "tsup": "^8.0.2",
+        "typescript": "5.3.3",
+      },
+    },
     "packages/eslint-config": {
       "name": "@vectorkit/eslint-config",
       "version": "0.0.0",
@@ -55,7 +64,7 @@
       "name": "@vectorkit/ui",
       "version": "0.0.0",
       "dependencies": {
-        "react": "^18.2.0",
+        "@vectorkit/design-tokens": "workspace:*",
       },
       "devDependencies": {
         "@types/react": "^18.2.61",
@@ -63,8 +72,14 @@
         "@vectorkit/eslint-config": "*",
         "@vectorkit/typescript-config": "*",
         "eslint": "^8.57.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
         "tsup": "^8.0.2",
         "typescript": "5.3.3",
+      },
+      "peerDependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
       },
     },
   },
@@ -500,6 +515,8 @@
     "@unrs/resolver-binding-win32-ia32-msvc": ["@unrs/resolver-binding-win32-ia32-msvc@1.11.1", "", { "os": "win32", "cpu": "ia32" }, "sha512-DCEI6t5i1NmAZp6pFonpD5m7i6aFrpofcp4LA2i8IIq60Jyo28hamKBxNrZcyOwVOZkgsRp9O2sXWBWP8MnvIQ=="],
 
     "@unrs/resolver-binding-win32-x64-msvc": ["@unrs/resolver-binding-win32-x64-msvc@1.11.1", "", { "os": "win32", "cpu": "x64" }, "sha512-lrW200hZdbfRtztbygyaq/6jP6AKE8qQN2KvPcJ+x7wiD038YtnYtZ82IMNJ69GJibV7bwL3y9FgK+5w/pYt6g=="],
+
+    "@vectorkit/design-tokens": ["@vectorkit/design-tokens@workspace:packages/design-tokens"],
 
     "@vectorkit/eslint-config": ["@vectorkit/eslint-config@workspace:packages/eslint-config"],
 
