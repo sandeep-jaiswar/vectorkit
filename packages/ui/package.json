@@ -29,7 +29,7 @@
       "import": "./dist/hero-tray.mjs",
       "require": "./dist/hero-tray.js"
     },
-    "./styles.css": "./dist/index.css"
+    "./styles.css": "./dist/styles.css"
   },
   "scripts": {
     "build": "tsup",
